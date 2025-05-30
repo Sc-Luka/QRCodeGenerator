@@ -85,7 +85,7 @@ void MainWindow::on_GenarateQR_clicked()
 
     QImage qrImage=generateQRCode(userInput);
     if (!qrImage.isNull()) {
-        QImage scaled = qrImage.scaled(300, 300, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        QImage scaled = qrImage.scaled(300, 300, Qt::KeepAspectRatio, Qt::SmoothTransformation); // 300 is my square size in GUI
         ui->qrLabel->setPixmap(QPixmap::fromImage(scaled));
     }
 
